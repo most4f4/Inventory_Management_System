@@ -85,6 +85,20 @@ src/main/resources/ca/demo/
 └── assets/             # Images and Icons
 ```
 
+## 📸 Screenshots
+
+**Login interface**  
+![Login interface](images/img4.png)
+
+**Main dashboard**  
+![Main dashboard](images/img3.png)
+
+**Part management**  
+![Part management](images/img1.png)
+
+**Part management**  
+![Product management](images/img2.png)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -181,20 +195,6 @@ Alternative:
 - Must have at least one associated part
 - Product price cannot be less than the cost of any associated part
 - Standard min/max/stock validation applies
-
-## 📸 Screenshots
-
-**Login interface**  
-![Login interface](images/img4.png)
-
-**Main dashboard**  
-![Main dashboard](images/img3.png)
-
-**Part management**  
-![Part management](images/img1.png)
-
-**Part management**  
-![Product management](images/img2.png)
 
 ## 🔄 Future Enhancements
 
