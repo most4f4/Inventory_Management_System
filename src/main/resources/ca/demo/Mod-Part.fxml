@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="877.0" prefWidth="959.0" style="-fx-background-color: #c8cf94; -fx-border-color: #3b503d; -fx-border-width: 20px;" vgap="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.demo.Controllers.ModifyPartController">
+  <columnConstraints>
+    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="16.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <RadioButton fx:id="inHouseRB" mnemonicParsing="false" selected="true" text="In-House" textFill="#3b503d">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="locationRB" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </HBox>
+      <RadioButton fx:id="outsourcedRB" mnemonicParsing="false" text="Outsourced" textFill="#3b503d" toggleGroup="$locationRB" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></RadioButton>
+      <Label text="ID" textFill="#3b503d" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label text="Inv" textFill="#3b503d" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label text="Price/Cost" textFill="#3b503d" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label text="Max" textFill="#3b503d" GridPane.rowIndex="8">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label text="Min" textFill="#3b503d" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="locationLabel" text="MachineID" textFill="#3b503d" GridPane.rowIndex="10">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partIdTF" disable="true" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" text="Auto Generated" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="inventoryLevelTF" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <TextField fx:id="priceTF" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <TextField fx:id="maxValTF" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <TextField fx:id="locationTF" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <TextField fx:id="minValTF" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </TextField>
+      <HBox alignment="CENTER_RIGHT" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+         <children>
+            <VBox spacing="20.0">
+               <children>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveBtnPressed" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #4a746e;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelBtnPressed" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #4a746e;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox alignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <children>
+            <Label text="Modify Part" textFill="#3b503d">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Label text="Name" textFill="#3b503d" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTF" minHeight="45.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #f1edb3;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="11">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/editpart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="250.0" right="250.0" top="30.0" />
+   </padding>
+</GridPane>
